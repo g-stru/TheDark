@@ -18,5 +18,9 @@ public class LaszloScript : MonoBehaviour
     void Update()
     {
         rBody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rBody.velocity.y);
+
+        if(Input.GetKey(KeyCode.W)){
+            rBody.velocity = new Vector2(rBody.velocity.x, speed);
+        }
     }
 }
