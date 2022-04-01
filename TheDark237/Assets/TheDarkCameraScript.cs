@@ -11,10 +11,15 @@ public class TheDarkCameraScript : MonoBehaviour
 
     public float delay = 2f;
 
+    private float rightBound;
+    private float leftBound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rightBound = 83.19f;
+        leftBound = -10.56093f;
+
     }
 
     // Update is called once per frame
@@ -24,7 +29,7 @@ public class TheDarkCameraScript : MonoBehaviour
 
         // Changing the Camera's position
         //  --> If the current Camera position isn't matching the players...
-        if(transform.position.x != laszlo.transform.position.x)
+        if(transform.position.x != laszlo.transform.position.x && laszlo.transform.position.x > leftBound && laszlo.transform.position.x < rightBound)
         {
             // Change Camera movement to the new xPos and yPos
             // Lerp method allows us to add the delay
