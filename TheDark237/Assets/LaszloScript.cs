@@ -8,6 +8,8 @@ public class LaszloScript : MonoBehaviour
     public Rigidbody2D rBody;
     public float speed;
 
+    public GameObject l;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,12 @@ public class LaszloScript : MonoBehaviour
 
         if(Input.GetKey(KeyCode.W)){
             rBody.velocity = new Vector2(rBody.velocity.x, speed);
+        }
+        if(Input.GetKey(KeyCode.L)){
+            l.SetActive(false);
+        }
+        else{
+            l.SetActive(true);
         }
     }
 }
