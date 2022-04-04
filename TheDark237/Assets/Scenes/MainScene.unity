@@ -340,8 +340,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 127579472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 4.37, z: -1}
-  m_LocalScale: {x: 0.31189236, y: 0.29663026, z: 1}
+  m_LocalPosition: {x: -0.41, y: 6.6, z: -1}
+  m_LocalScale: {x: 0.58573383, y: 0.6377551, z: 1}
   m_Children: []
   m_Father: {fileID: 1259061747}
   m_RootOrder: 1
@@ -1931,8 +1931,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018226203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2, y: 1.94, z: 0}
-  m_LocalScale: {x: 0.33656472, y: 0.33656472, z: 0.33656472}
+  m_LocalPosition: {x: 6.59, y: 0.97, z: 0}
+  m_LocalScale: {x: 0.9210632, y: 0.89386743, z: 0.33656472}
   m_Children: []
   m_Father: {fileID: 1259061747}
   m_RootOrder: 0
@@ -2436,6 +2436,7 @@ GameObject:
   - component: {fileID: 1259061748}
   - component: {fileID: 1259061750}
   - component: {fileID: 1259061751}
+  - component: {fileID: 1259061752}
   m_Layer: 0
   m_Name: Laszlo
   m_TagString: Untagged
@@ -2483,7 +2484,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e3b1773fc7f751458605e17c52c2a5d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2502,8 +2503,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259061745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.14, y: -2.79, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.19, y: -2, z: -1}
+  m_LocalScale: {x: 0.30805966, y: 0.28498554, z: 1}
   m_Children:
   - {fileID: 1018226204}
   - {fileID: 127579473}
@@ -2523,18 +2524,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2945433}
+  m_Offset: {x: 0.739059, y: -0.11464214}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 18.9, y: 14.17}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.41091344}
+  m_Size: {x: 6.6671457, y: 9.926849}
   m_EdgeRadius: 0
 --- !u!50 &1259061749
 Rigidbody2D:
@@ -2680,6 +2681,25 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!95 &1259061752
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259061745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72a63933770553b47b98e867f2d056da, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1337975159
 GameObject:
   m_ObjectHideFlags: 0

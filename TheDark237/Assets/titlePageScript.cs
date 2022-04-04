@@ -25,7 +25,7 @@ public class titlePageScript : MonoBehaviour
     {
         fadeSpace();
         fadeTitle();
-        if(Input.GetKeyDown("space")){
+        if(Input.GetKeyDown("space") && !fadeIn){
             Time.timeScale = 1;
             fadeOut = true;
         }
