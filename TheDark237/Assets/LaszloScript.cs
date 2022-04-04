@@ -10,6 +10,8 @@ public class LaszloScript : MonoBehaviour
 
     public GameObject l;
 
+    public GameObject flashLight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +28,11 @@ public class LaszloScript : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.L)){
             l.SetActive(false);
+            flashLight.SetActive(true);
         }
         else{
             l.SetActive(true);
+            flashLight.SetActive(false);
         }
     }
 }
