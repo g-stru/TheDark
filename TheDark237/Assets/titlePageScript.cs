@@ -9,6 +9,7 @@ public class titlePageScript : MonoBehaviour
     public GameObject screen;
     public CanvasGroup titleAlpha;
     public CanvasGroup spaceAlpha;
+    public CanvasGroup blobAlpha;
 
     public bool fadeIn = true;
     public bool fadeOut = false;
@@ -38,6 +39,7 @@ public class titlePageScript : MonoBehaviour
 
     public void fadeTitle(){
         fadeIt(titleAlpha);
+        fadeIt(blobAlpha);
     }
 
 

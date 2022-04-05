@@ -10,7 +10,12 @@ public class LaszloScript : MonoBehaviour
 
     public GameObject l;
 
+    public GameObject flashLightRIGHT;
+
+    public GameObject flashLightLEFT;
     public GameObject flashLight;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +38,26 @@ public class LaszloScript : MonoBehaviour
         else{
             l.SetActive(true);
             flashLight.SetActive(false);
+        }
+
+        checkAnimation();
+    } 
+
+    public void checkAnimation(){
+        if(Input.GetKey(KeyCode.D)){
+            animator.SetBool("RUN", true);
+            animator.SetFloat("Move", 1);
+            flashLight = flashLightRIGHT;
+            flashLightLEFT.SetActive(false);
+        }
+        else if(Input.GetKey(KeyCode.A)){
+            animator.SetBool("RUN", true);
+            animator.SetFloat("Move", -1);
+            flashLight = flashLightLEFT;
+            flashLightRIGHT.SetActive(false);
+        }
+        else{
+            animator.SetBool("RUN", false);
         }
     }
 }
