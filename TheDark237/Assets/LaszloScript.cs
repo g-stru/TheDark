@@ -22,7 +22,7 @@ public class LaszloScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 5;
+        speed = 4;
     }
 
     // Update is called once per frame

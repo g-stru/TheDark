@@ -11,6 +11,8 @@ public class ArrowScript : MonoBehaviour
 
     public CanvasGroup arrowAlpha;
 
+    public AudioSource knock;
+
     public bool fadeIn = false;
     public bool fadeOut = false;
 
@@ -26,6 +28,7 @@ public class ArrowScript : MonoBehaviour
         foreach(GameObject checkpoint in checkpoints){
             if(laszlo.transform.position.x < checkpoint.transform.position.x + 0.5 && laszlo.transform.position.x > checkpoint.transform.position.x - 0.5 && !inProcess){
                 fadeIn = true;
+                knock.Play();
                 inProcess = true;
             }
         }
