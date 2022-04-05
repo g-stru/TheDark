@@ -17,6 +17,8 @@ public class LaszloScript : MonoBehaviour
 
     public Animator animator;
 
+    private bool doneJump = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +30,10 @@ public class LaszloScript : MonoBehaviour
     {
         rBody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, rBody.velocity.y);
 
-        if(Input.GetKey(KeyCode.W)){
-            rBody.velocity = new Vector2(rBody.velocity.x, speed);
+        if(Input.GetKey(KeyCode.W) && doneJump){
+            rBody.velocity = new Vector2(rBody.velocity.x, 8);
+            animator.SetBool("JUMP", true);
+            doneJump = false;
         }
         if(Input.GetKey(KeyCode.L)){
             l.SetActive(false);
@@ -38,6 +42,11 @@ public class LaszloScript : MonoBehaviour
         else{
             l.SetActive(true);
             flashLight.SetActive(false);
+        }
+
+        if(transform.position.y < -1.7){
+            animator.SetBool("JUMP", false);
+            doneJump = true;
         }
 
         checkAnimation();
